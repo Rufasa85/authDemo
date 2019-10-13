@@ -26,6 +26,10 @@ app.use(session({ secret: process.env.SESSION_SECRET, resave: true, saveUninitia
 
 app.use('/',allRoutes);
 
+app.get('/',function(req,res){
+    res.render('index')
+})
+
 db.sequelize.sync({ force: false}).then(function() {
     app.listen(PORT, function() {
     console.log('App listening on PORT ' + PORT);
