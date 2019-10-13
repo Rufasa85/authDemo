@@ -1,3 +1,4 @@
+//npm package import, bcrypt does the encrypting for us
 var bcrypt = require('bcrypt');
 
 module.exports = function(sequelize, DataTypes) {
@@ -20,6 +21,7 @@ module.exports = function(sequelize, DataTypes) {
         // add associations here
         // ex:User.hasMany(models.BlogPost);
     };
+    //sequelize hook, will run before model instance is created and hash password
     User.beforeCreate(function(user) {
         user.password = bcrypt.hashSync(user.password, bcrypt.genSaltSync(10), null);
       });
