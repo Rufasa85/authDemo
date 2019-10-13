@@ -6,7 +6,7 @@ const bcrypt = require('bcrypt');
 
 router.get('/secret',function(req,res){
     if(req.session.user) {
-        res.render('securePage',req.session.user);
+        res.render('securepage',req.session.user);
     }else {
         res.send('log in first jabroni!')
     }
