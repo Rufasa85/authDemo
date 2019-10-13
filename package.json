@@ -1,0 +1,30 @@
+{
+  "name": "authdemo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rufasa85/authDemo.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Rufasa85/authDemo/issues"
+  },
+  "homepage": "https://github.com/Rufasa85/authDemo#readme",
+  "dependencies": {
+    "bcrypt": "^3.0.6",
+    "dotenv": "^8.1.0",
+    "express": "^4.17.1",
+    "express-handlebars": "^3.1.0",
+    "express-session": "^1.17.0",
+    "handlebars": "^4.4.3",
+    "mysql2": "^1.7.0",
+    "sequelize": "^5.19.6"
+  }
+}
