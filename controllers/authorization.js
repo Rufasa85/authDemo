@@ -49,7 +49,7 @@ router.post('/login',function(req,res){
             //compares password send in req.body to one in database, will return true if matched.
         if(bcrypt.compareSync(req.body.password,dbUser.password)) {
             //create new session property "user", set equal to logged in user
-            req.session.user = dbUser
+            req.session.user = dbUser;
         }
         else {
             //delete existing user, add error
