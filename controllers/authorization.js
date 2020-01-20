@@ -32,6 +32,8 @@ router.post('/signup',function(req,res){
     }).then(function(newUser){
         console.log(newUser)
         res.json(newUser);
+    }).catch(function(error){
+        console.log(error);
     })
 })
 
@@ -49,7 +51,7 @@ router.post('/login',function(req,res){
             //compares password send in req.body to one in database, will return true if matched.
         if(bcrypt.compareSync(req.body.password,dbUser.password)) {
             //create new session property "user", set equal to logged in user
-            req.session.user = dbUser;
+            req.session.user = {name:dbUser.name,id:dbUser.id};
         }
         else {
             //delete existing user, add error
