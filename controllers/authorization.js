@@ -52,9 +52,10 @@ router.post('/login',function(req,res){
         if(bcrypt.compareSync(req.body.password,dbUser.password)) {
             //create new session property "user", set equal to logged in user
             req.session.user = {name:dbUser.name,id:dbUser.id};
+            req.session.error = "";
         }
         else {
-            //delete existing user, add error
+            //delete existing user session, add error
             req.session.user= false;
             req.session.error = 'auth failed bro'
         }
