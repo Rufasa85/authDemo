@@ -18,7 +18,7 @@
   },
   "homepage": "https://github.com/Rufasa85/authDemo#readme",
   "dependencies": {
-    "bcrypt": "^3.0.6",
+    "bcrypt": "^5.0.0",
     "dotenv": "^8.1.0",
     "express": "^4.17.1",
     "express-handlebars": "^3.1.0",
